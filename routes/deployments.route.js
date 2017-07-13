@@ -20,8 +20,6 @@ router.post('/', function(req, res, next) {
     timestamp: req.body.timestamp,
   };
 
-  console.log('>>> deployment = ', deployment);
-
   Deployment.create(deployment, (err, newDeployment) => {
     if (err) {
       res.send(err);
